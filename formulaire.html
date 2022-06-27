@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">mentions légales</a>
+        <a href="formulaire.html">S'inscrire</a>
+      </nav>
+    </header>
+    <main class="formulaire">
+  <!---on affiche "en dur" le contenu du formulaire quand il est validé ----->
+
+       
+        <form id="form_1" action="#" method="post">
+           <h1 class="article">Ecrire un article</h1>
+           <div class="form-group">
+                <p>Choisissez une catégorie :</p>
+                <div>
+                    <input type="radio" name="categorie" id="team" value="team">
+                    <label for="team">team</label>
+
+                    <input type="radio" name="categorie" id="work" value="work">
+                    <label for="work">work</label>
+
+                    <input type="radio" name="categorie" id="news" value="news">
+                    <label for="news">news</label>
+                </div>
+            </div>
+          <div class="form-group">
+            <label for="titre">Titre :</label>
+            <input type="text" name="titre" id="titre" class="form-control" aria-required="true" />
+          </div>
+          <div class="form-group">
+            <label for="Auteur">Auteur :</label>
+            <input type="text" name="auteur" id="auteur" class="form-control" aria-required="true" />
+          </div>
+          <div class="form-group">
+            <labe for="avatar">Avatar :</labe>
+            <input type="file" name="avatar" id="avatar" class="form-control" aria-required="true" />
+          </div>
+          <div class="form-group">
+            <label for="img_illustration">Vous pouvez téléverser une image d'illustration : </label> 
+            <input type="file" name="img_illustration"  id="img_illustration" class="form-control" aria-required="true" />
+          </div>
+          <div class="form-group">
+            <label for="contenu">Contenu de l'article :</label> 
+            <textarea name="contenu"
+              id="editer"
+              class="form-control"
+              rows= "10"
+              cols="50"
+              aria-required="true"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+             <input type="date" name="date_publication" id="date_publication" class="form-control" value="<?=date('Y-m-d')?>"/>
+            <button type="submit">Publier</button>
+             
+      </form>
+
+        <!-- contenu de l'article + image d'illustration -->
+        <div id="contenue">
+          <img id="article-image" src="https://picsum.photos/seed/picsum/400/200" 
+            alt="illustration"/>
+          <p> ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+          neque dolorem repellat dolores impedit maxime provident
+          necessitatibus. Culpa illum perferendis obcaecati placeat vero,
+          itaque, officiis ducimus reprehenderit dignissimos optio nobis
+          voluptatibus neque exercitationem, accusantium tempore autem
+          praesentium provident quis incidunt voluptatum. Numquam quo ad sint
+          velit, quisquam saepe quod exercitationem.</p>
+          
+         <!-- ScrollToTop Button -->
+            <a class="btn scrollToTop" href="#article-image"></a>
+
+        <!-- lien vers accueil -->
+          <div class="link-group">
+              <a class="retour-acceuil" href="./index.html">Retour la liste des articles</a>
+              
+          </div>
+    </div>
+    </article>
+    </main>
+    
+    </body>
+    </html>
